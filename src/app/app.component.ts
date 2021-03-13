@@ -20,7 +20,7 @@ export class AppComponent {
     this.inputValue = '';
   }
 
-  togogleStatus(val): void {
+  toggleStatus(val): void {
     val.done = !val.done;
   }
 

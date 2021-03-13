@@ -305,7 +305,7 @@
 </div>
 
 <ul class="todo-list" *ngFor="let todo of todos;let i = index;" >
-  <li [ngClass]="{'checked':todo.done}" (click)="togogleStatus(todo)">
+  <li [ngClass]="{'checked':todo.done}" (click)="toggleStatus(todo)">
     <div>
       {{todo.text |uppercase}}
     </div>
