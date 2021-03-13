@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todo';
+
+  title = 'My To Do List Demo';
+  inputValue = '';
+
+  todos: any[] = [];
+
+  addToList(): void {
+    this.todos.push({
+      text: this.inputValue,
+      done: false,
+    });
+    this.inputValue = '';
+  }
+
+  togogleStatus(val): void {
+    val.done = !val.done;
+  }
+
+  rmItem(num): void {
+    this.todos.splice(num, 1);
+  }
 }
